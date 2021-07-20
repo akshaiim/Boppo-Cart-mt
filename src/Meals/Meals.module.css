@@ -1,0 +1,18 @@
+.meals{
+    
+   
+    
+}
+
+.mealbox{
+    margin: 50px auto;
+    background-color: honeydew;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0 auto;
+    list-style: none;
+    
+    border-radius: 14px;
+
+
+}

@@ -1,4 +1,5 @@
 import { Header } from "./Layout/Header";
+import contextProvider from "./store/CartContextProvider";
 import { Cart } from "./Cart/Cart";
 
 import { Meals } from "./Meals/Meals";
@@ -16,7 +17,7 @@ function App() {
   };
 
   return (
-    <div>
+    <contextProvider>
       <Header handleCartOpenClick={handleCartOpenClick}/>
 
       <Meals />
@@ -25,7 +26,7 @@ function App() {
         handleCartOpenClick={handleCartOpenClick}
         handleCartCloseClick={handleCartCloseClick}
       />
-    </div>
+    </contextProvider>
   );
 }
 

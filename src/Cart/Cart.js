@@ -20,11 +20,11 @@ export const Cart = (props) => {
   return (
     <Modal onhandleCartCloseClick={props.handleCartCloseClick} isCartOpen={props.cartOpen}>
       {cartItems}
-      <div className={classes.amount}>
+      <div className={classes.total}>
         <span>Total Amount</span>
         <span>$ 23.99</span>
       </div>
-      <div>
+      <div className={classes.actions}>
         <button onClick={props.handleCartCloseClick} className={classes["button--alt"]}>Close</button>
         <button className={classes.button}>Order</button>
       </div>

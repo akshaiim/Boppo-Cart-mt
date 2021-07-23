@@ -2,7 +2,7 @@
 shopping cart built with react
 
 
-clone or download the zipped folder, install the dependencies via "yarn install" command and run the app via "yarn start" command.
+clone or download the zipped folder, install the dependencies via "npm install" command and run the app via "npm start" command.
 
 This project was bootstrapped with Create React App.
 

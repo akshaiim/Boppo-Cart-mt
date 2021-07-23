@@ -6,7 +6,7 @@ import Modal from "../UI/Modal";
 
 export const Cart = (props) => {
   const context = useContext(CartContext);
-  console.log(`JSON.stringify(${context.items}) is here`)
+  console.log(`$${context.totalAMount} is here`)
 
   // const totalAmount = `$${context.totalAMount.toFixed(2)}`;
 
@@ -41,6 +41,7 @@ export const Cart = (props) => {
       isCartOpen={props.cartOpen}
     >
       {cartItems}
+      {!hasItems && <h4>Your Cart is Empty</h4>}
       {/* <div className={classes.total}>
         <span>Total Amount</span>
         <span>{totalAmount}</span>

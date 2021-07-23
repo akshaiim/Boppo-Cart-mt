@@ -1,5 +1,5 @@
 import { Header } from "./Layout/Header";
-import contextProvider from "./store/CartContextProvider";
+import CartProvider from "./store/CartProvider";
 import { Cart } from "./Cart/Cart";
 
 import { Meals } from "./Meals/Meals";
@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <contextProvider>
+    <CartProvider>
       <Header handleCartOpenClick={handleCartOpenClick}/>
 
       <Meals />
@@ -26,8 +26,37 @@ function App() {
         handleCartOpenClick={handleCartOpenClick}
         handleCartCloseClick={handleCartCloseClick}
       />
-    </contextProvider>
+    </CartProvider>
   );
 }
 
 export default App;
+
+
+
+
+
+// {
+//   id: "m1",
+//   name: "Sushi",
+//   description: "Finest fish and veggies",
+//   price: 22.99,
+// },
+// {
+//   id: "m2",
+//   name: "Schnitzel",
+//   description: "A german specialty!",
+//   price: 16.5,
+// },
+// {
+//   id: "m3",
+//   name: "Barbecue Burger",
+//   description: "American, raw, meaty",
+//   price: 12.99,
+// },
+// {
+//   id: "m4",
+//   name: "Green Bowl",
+//   description: "Healthy...and green...",
+//   price: 18.99,
+// },

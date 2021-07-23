@@ -1,12 +1,12 @@
 import React, {createContext} from "react";
 
 
-const cartCtx = createContext({
-    items : [12,687,6],
+const CartContext = React.createContext({
+    items : [],
     totalAMount : 0,
     addItem: (item) => {} ,
     removeItem : (id) => {}
 })
 
 
-export default cartCtx;
+export default CartContext;

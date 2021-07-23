@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState, useEffect} from "react";
 import { MealSummary } from "./MealSummary";
 import { MealItem } from "../Meals/MealItems/MealItem"
 import { Card } from "../UI/Card";
@@ -28,18 +28,35 @@ const DUMMY_MEALS = [
     name: "Green Bowl",
     description: "Healthy...and green...",
     price: 18.99,
-  },
+  }
+    
 ];
 
+
+
+
+
 export const Meals = () => {
-  const meals = DUMMY_MEALS.map((meals) => (
-    <ul key={meals.id} className={classes.mealbox}>
-      <MealItem meals={meals}/>
+
+  const [product, setProduct] = useState([])
+
+
+
+
+
+  useEffect(()=>{
+    fetch("https://fakestoreapi.com/products").then(res=>res.json()).then(res=>setProduct(res))
+  })
+
+
+  const meals = product.map((meals) => (
+    <ul key={meals.id} id={meals.id} className={classes.mealbox}>
+      <MealItem id={meals.id} meals={meals}/>
     </ul>
   ));
   return (
     <>
-      <MealSummary />
+      {/* <MealSummary /> */}
       <Card>{meals}</Card>
     </>
   );

@@ -4,7 +4,7 @@ import { Card } from "../UI/Card";
 import classes from "./Products.module.css";
 
 
-export const Products = () => {
+const Products = () => {
   const [product, setProduct] = useState([]);
 
  
@@ -29,3 +29,6 @@ export const Products = () => {
     </>
   );
 };
+
+
+export  default Products;

@@ -40,6 +40,7 @@ export const Cart = (props) => {
       onhandleCartCloseClick={props.handleCartCloseClick}
       isCartOpen={props.cartOpen}
     >
+      <h2>Checkout Modal</h2>
       {cartItems}
       {!hasItems && <h4>Your Cart is Empty</h4>}
       {/* <div className={classes.total}>

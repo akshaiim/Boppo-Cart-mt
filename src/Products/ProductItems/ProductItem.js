@@ -10,7 +10,7 @@ export const ProductItem = (props) => {
     const price = `$${props.products.price.toFixed(2)}`
 
     const addToCartHandler = (amount) => {
-        // console.log(amount)
+
         
         context.addItem({
             id: props.products.id,

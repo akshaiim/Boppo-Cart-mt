@@ -12,7 +12,6 @@ function App() {
   };
 
   const handleCartOpenClick = () => {
-    console.log("hello")
     setCartOpen(true);
   };
 

@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
-import  {ProductItem} from "./ProductItems/ProductItem";
+import { ProductItem } from "./ProductItems/ProductItem";
 import { Card } from "../UI/Card";
 import classes from "./Products.module.css";
-
 
 const Products = () => {
   const [product, setProduct] = useState([]);
 
- 
-
   useEffect(() => {
-  
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((res) => setProduct(res))
@@ -24,11 +20,9 @@ const Products = () => {
   ));
   return (
     <>
-     
       <Card> {shoppingProduct}</Card>
     </>
   );
 };
 
-
-export  default Products;
+export default Products;

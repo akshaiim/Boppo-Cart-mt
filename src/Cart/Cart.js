@@ -6,19 +6,24 @@ import Modal from "../UI/Modal";
 
 export const Cart = (props) => {
   const context = useContext(CartContext);
-  console.log(`$${context.totalAMount} is here`)
+  const amountt = context.totalAmount.toFixed(2)
+  // console.log((amountt))
 
   // const totalAmount = `$${context.totalAMount.toFixed(2)}`;
 
   const hasItems = context.items.length > 0;
 
   const cartItemAddHandler = (item) => {
-    context.addItem({...item,amount : 1})
+    context.addItem({...item})
   };
 
   const cartItemRemoveHandler = (id) => {
     context.removeItem(id)
   };
+
+  const emptyCartHandler = ()=>{
+    context.empty()
+  }
 
   const cartItems = (
     <ul className={classes["cart-items"]}>
@@ -43,10 +48,10 @@ export const Cart = (props) => {
       <h2>Checkout Modal</h2>
       {cartItems}
       {!hasItems && <h4>Your Cart is Empty</h4>}
-      {/* <div className={classes.total}>
+      <div className={classes.total}>
         <span>Total Amount</span>
-        <span>{totalAmount}</span>
-      </div> */}
+        <span>${amountt}</span>
+      </div>
       <div className={classes.actions}>
         <button
           onClick={props.handleCartCloseClick}
@@ -54,6 +59,7 @@ export const Cart = (props) => {
         >
           Close
         </button>
+        {hasItems && <button onClick={emptyCartHandler} className={classes.button}>Empty</button>}
         {hasItems && <button className={classes.button}>Order</button>}
       </div>
     </Modal>

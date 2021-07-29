@@ -7,7 +7,7 @@ function Modal(props) {
   return (
     <>
       {props.isCartOpen && (
-        ReactDOM.createPortal(<div className={classes.backdrop} onClick={props.onhandleCartCloseClick}>
+        ReactDOM.createPortal(<div className={classes.backdrop} >
           <div className={classes.modal}>{props.children}</div>
         </div>,document.getElementById('modal'))
       )}

@@ -10,7 +10,7 @@ const Products = React.lazy(()=>{
   const product = new Promise((resolve) => {
     setTimeout(() => {
       return resolve(import("./Products/Products"))
-    }, 3000)
+    }, 2000)
   })
   return product;
 })

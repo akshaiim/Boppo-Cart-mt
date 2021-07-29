@@ -7,8 +7,8 @@ import CartContext from '../store/CartContext';
 
 export const Header = (props) => {
     console.log(props)
-   const context = React.useContext(CartContext)
-   console.log(context)
+//    const context = React.useContext(CartContext)
+//    console.log(context)
     return (
         <>
         <header className={classes.header}>

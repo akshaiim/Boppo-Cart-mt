@@ -1,6 +1,8 @@
 # Boppo-Cart-mt
 shopping cart built with react
 
+To view live site, plz visit: https://bt-react-cart.netlify.app/
+
 
 clone or download the zipped folder, install the dependencies via "npm install" command and run the app via "npm start" command.
 
